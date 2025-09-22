@@ -172,6 +172,28 @@
             margin-right: auto;
         }
 
+        /* Firefox */
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) #f1f1f1;
+        }
+
+        /* Chrome, Edge, Safari */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--primary);
+            border-radius: 6px;
+            border: 2px solid #f1f1f1;
+        }
+
+
         /* ===== COMPONENT STYLES ===== */
         /* Theme Toggle */
         .theme-toggle {
@@ -2158,8 +2180,7 @@
             </div>
 
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-                    alt="Qazi Farhan Ahmad" class="floating-img">
+                <img src="./assets/hero-image.jpg" alt="Qazi Farhan Ahmad" class="floating-img">
             </div>
         </div>
 
@@ -2312,8 +2333,7 @@
 
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-                        alt="Qazi Farhan Ahmad">
+                    <img src="./assets/about-image.webp" alt="Qazi Farhan Ahmad">
                 </div>
 
                 <div class="about-text">
@@ -2779,9 +2799,12 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
+                        <a href="mailto:hello@example.com?subject=Quote%20request&body=Hi%20there%2C%0A%0AI%20would%20like%20a%20quote%20for%20..."
+                            target="_blank" rel="noopener noreferrer" aria-label="Send email">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </a>
                         <div>
                             <h3>Email</h3>
                             <p>qazithekingston@gmail.com</p>
@@ -2789,9 +2812,11 @@
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
+                        <a href="tel:+923141935787" aria-label="Call us">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                        </a>
                         <div>
                             <h3>Phone</h3>
                             <p>+92 (314) 193-5787</p>
@@ -2799,9 +2824,12 @@
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                        <a href="https://www.google.com/maps/place/Peshawar,+Pakistan/@33.9774675,71.4003115,11z/data=!3m1!4b1!4m6!3m5!1s0x38d917b90f0e79cf:0xa816b2637558a412!8m2!3d34.0083374!4d71.5188619!16zL20vMGhqNmg?entry=ttu&g_ep=EgoyMDI1MDkxNy4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank" rel="noopener noreferrer" aria-label="Open location in Google Maps">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </a>
                         <div>
                             <h3>Location</h3>
                             <p>Peshawar, KPK</p>
@@ -2834,13 +2862,20 @@
             <a href="#" class="logo">Qazi<span>.</span></a>
 
             <ul class="social-links">
-                <li><a href="#" class="social-link"><i class="fab fa-github"></i></a></li>
-                <li><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#" class="social-link"><i class="fab fa-dribbble"></i></a></li>
+                <li><a href="https://github.com/Qaziaaaa" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit our GitHub profile" class="social-link"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/qazi-farhan-ahmad-7a3b3432b/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit our LinkedIn profile" class="social-link"><i
+                            class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://instagram.com/ahmadq_azi" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit our Instagram profile" class="social-link"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li><a href="https://wa.me/923141935787?text=Hello%20I%20have%20a%20question%20about%20your%20services"
+                        target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" class="social-link"><i
+                            class="fab fa-whatsapp"></i></a></li>
             </ul>
 
-            <p class="copyright">© 2023 Qazi Farhan Ahmad. All rights reserved.</p>
+            <p class="copyright">© 2025 Qazi Farhan Ahmad. All rights reserved.</p>
         </div>
     </footer>
 
