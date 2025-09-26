@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, user-scalable=yes, shrink-to-fit=no">
     <title>Qazi Farhan Ahmad | Creative Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
@@ -2126,6 +2126,41 @@
                 gap: 20px;
             }
         }
+
+        /* Prevent horizontal scroll and zoom-out white space */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Nuclear option - absolutely prevent any horizontal movement */
+body {
+    min-width: 100vw;
+    max-width: 100vw;
+    width: 100vw;
+}
+
+/* Ensure all containers stay within viewport */
+.container, .section, .nav, .hero, .footer, 
+.stats, .membership-grid, .classes-grid, .team-grid {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Critical fix for mobile viewport */
+@media (max-width: 768px) {
+    body {
+        position: relative;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Prevent any element from causing overflow */
+    * {
+        max-width: 100vw;
+    }
+}
     </style>
 </head>
 
@@ -2180,7 +2215,7 @@
             </div>
 
             <div class="hero-image">
-                <img src="./hero-image.jpg" alt="Qazi Farhan Ahmad" class="floating-img">
+                <img src="./assets/hero-image.jpg" alt="Qazi Farhan Ahmad" class="floating-img">
             </div>
         </div>
 
@@ -2333,7 +2368,7 @@
 
             <div class="about-content">
                 <div class="about-img">
-                    <img src="./about-image.webp" alt="Qazi Farhan Ahmad">
+                    <img src="./assets/about-image.webp" alt="Qazi Farhan Ahmad">
                 </div>
 
                 <div class="about-text">
@@ -2892,6 +2927,22 @@
         // ===== JAVASCRIPT =====
         // Wait for DOM to load
         document.addEventListener('DOMContentLoaded', function () {
+            // Prevent zoom-out white space
+function preventHorizontalScroll() {
+    // Reset body width to viewport width
+    document.body.style.width = '100vw';
+    document.body.style.overflowX = 'hidden';
+    
+    // Monitor for any resize or orientation changes
+    window.addEventListener('resize', function() {
+        document.body.style.width = '100vw';
+        document.body.style.overflowX = 'hidden';
+    });
+}
+
+// Run on load and DOM ready
+document.addEventListener('DOMContentLoaded', preventHorizontalScroll);
+window.addEventListener('load', preventHorizontalScroll);
             // Initialize GSAP animations
             initGSAPAnimations();
 
@@ -3766,4 +3817,3 @@
 </body>
 
 </html>
-
